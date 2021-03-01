@@ -1,4 +1,4 @@
-/**************************************************************************//**
+/********************************************************************//**
  * @file     core_cm3.c
  * @brief    CMSIS Cortex-M3 Core Peripheral Access Layer Source File
  * @version  V1.30
@@ -380,7 +380,7 @@ uint32_t __LDREXW(uint32_t *addr)
   __ASM("ldrex r0, [r0]");
   __ASM("bx lr");
 }
-
+/***************************************/
 /**
  * @brief  STR Exclusive (8 bit)
  *
@@ -772,7 +772,7 @@ uint32_t __STREXW(uint32_t value, uint32_t *addr)
 }
 
 
-#elif (defined (__TASKING__)) /*------------------ TASKING Compiler ---------------------*/
+#elif (defined (__TASKING__)) /*------------------ TASKING Compiler ------------------*/
 /* TASKING carm specific functions */
 
 /*
